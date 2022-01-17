@@ -20,7 +20,6 @@
 			eventDate = Date.parse("17 Jan 2022 18:00:00 GMT") / 1000;
 			let test = new Date().toLocaleString();
 
-			console.log('eventDate :>> ', eventDate);
 			currentDate = Date.parse(test) / 1000;
 			
 			if(eventDate <= currentDate) {

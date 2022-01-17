@@ -15,14 +15,22 @@
     });
 
 
-    // ABOUT SLIDER
-    $('body').vegas({
-        slides: [
-            { src: 'images/slide-image01.jpg' },
-            { src: 'images/slide-image02.jpg' }
-        ],
-        timer: false,
-        transition: [ 'zoomOut', ]
-    });
+
 
 })(jQuery);
+
+$( document ).ready(function() {
+  
+  // var source = "sounds/sound.mp3"
+  // var audio = document.createElement("audio");
+  // //
+  // audio.autoplay = true;
+  // //
+  // audio.load()
+  // audio.addEventListener("load", function() { 
+  //     audio.play(); 
+  // }, true);
+  // audio.src = source;
+  // audio.play(); 
+
+});

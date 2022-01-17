@@ -89,6 +89,26 @@ https://templatemo.com/tm-521-get-ready
     background: #202020;
   }
 
+  #join{
+    color: #e4ff00;font-size: 3vh;
+  }
+  #join:hover{
+    color: violet;
+    transition: all 0.2s linear;
+    font-size: 4vh;
+  }
+  #my-audioplay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 29px;
+    /* background: transparent; */
+    border: none;
+    z-index: 999999999;
+  }
   .overlay {
     background: linear-gradient(to top right, #fbfbfb29, #000000);
     opacity: 0.9;

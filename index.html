@@ -3,23 +3,13 @@
 <head>
 
      <title>T-Rexx - Coming Soon Template</title>
-<!-- 
-
-Get Ready Template
-
-https://templatemo.com/tm-521-get-ready
-
--->
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="">
      <meta name="keywords" content="">
      <meta name="team" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/vegas.min.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
      <link rel="stylesheet" href="css/youtube_background.css">
 
      <!-- MAIN CSS -->
@@ -45,15 +35,19 @@ https://templatemo.com/tm-521-get-ready
 
      <!-- HOME -->
      <section id="home" style="z-index: 999;">
+          <audio id="my-audioplay" controls autoplay >
+               <source src="sounds/sound.mp3">
+             </audio>
+             
+     
         <div class="overlay"></div>
           <div class="container">
                <div class="row">
-
                     <div class="col-md-12 col-sm-12">
                          <div class="home-info">
                               <div id="my-countdown">
                                    <img src="images/logo.gif" width="130px"/>
-                                   <h1 id="test"> We are getting ready <br>to launch new game style!</h1>
+                                   <h1 id="test"> We are getting ready...</h1>
                                    <!-- You can change the date time in init.js file -->
                                    <ul class="countdown">
                                         <li>
@@ -73,8 +67,9 @@ https://templatemo.com/tm-521-get-ready
                                              <h3>seconds</h3>
                                         </li>     
                                    </ul>
-
-                                        <span class="days" style="color: white;">Open <h3>17 Jan 2022 18:00:00</h3></span>
+                                   <a href="https://discord.com/invite/t-rexx" id="join">
+                                        Join with us !</a>
+                                        <span class="days" style="color: white;"> <h3>Open: 17 Jan 2022 18:00:00</h3></span>
                                         
                               </div>
                  
@@ -85,13 +80,21 @@ https://templatemo.com/tm-521-get-ready
           </div>
      </section>
 
+
+     <!-- <audio id="musicplayer" autoplay>
+          <source src="sounds/sound.mp3">
+     </audio> -->
+
      <!-- SCRIPTS -->
      <script src="js/jquery.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/vegas.min.js"></script>
+     <!-- <script src="js/bootstrap.min.js"></script> -->
+     <!-- <script src="js/vegas.min.js"></script> -->
      <script src="js/countdown.js"></script>
      <script src="js/init.js"></script>
      <script src="js/custom.js"></script>
+     <script>
+          document.getElementById('autoplay').play();
+     </script>
 
 </body>
 </html>
