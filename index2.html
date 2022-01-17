@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>T-Rexx City Helper | Mr.V</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="dist/css/custom.css" />
+
+
+  <script src="dist/js/custom.js"></script>
+
+  <!-- Custom font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Estonia&family=Praise&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="
+      hold-transition
+      dark-mode
+      sidebar-mini
+      layout-fixed layout-navbar-fixed layout-footer-fixed layout-navbar-fixed
+      text-sm
+      sidebar-collapse
+    ">
+  <div id="my-container">
+    <div class="wrapper">
+      <!-- Preloader -->
+      <div class="preloader flex-column justify-content-center align-items-center">
+        <img class="animation__wobble" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60" />
+      </div>
+
+      <!-- Navbar -->
+      <nav class="main-header navbar navbar-expand navbar-dark" style="display:none"> -->
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <span class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></span>
+          </li>
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+              <i class="fas fa-th-large"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.navbar -->
+
+      <!-- Main Sidebar Container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4" style="display:block">
+        <!-- Brand Logo -->
+        <span href="index2.html" class="brand-link">
+          <img src="dist/img/Logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+            style="opacity: 0.8" title="Thành phố T-Rexx City" />
+          <span class="brand-text font-weight-light">T-Rexx City Helper</span>
+        </span>
+
+        <!-- Sidebar - Menu chính -->
+        <div class="sidebar">
+          <!-- Sidebar Menu -->
+          <nav class="col">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+
+              <!-- Trang chủ -->
+              <li class="nav-item menu-open">
+                <span class="nav-link active">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Trang chủ
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </span>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item" onclick="MyNavigator('homepage')">
+                    <span href="./index2.html" class="nav-link">
+                      <i class="fas fa-caret-square-right nav-icon"></i>
+                      <p>Chào mừng</p>
+                    </span>
+                  </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item" onclick="MyNavigator('note')">
+                    <span href="./index2.html" class="nav-link">
+                      <i class="fas fa-envelope nav-icon"></i>
+                      <p>Lời ngỏ</p>
+                    </span>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Chiếm đóng -->
+              <li class="nav-item menu-open">
+                <span class="nav-link active">
+                  <i class="nav-icon fas fa-fighter-jet"></i>
+                  <p>
+                    Chiếm đóng
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </span>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item" onclick="MyNavigator('occupied')">
+                    <span href="./index2.html" class="nav-link">
+                      <i class="fas fa-caret-square-right nav-icon"></i>
+                      <p>Hướng dẫn</p>
+                    </span>
+                  </li>
+                </ul>
+
+              </li>
+
+              <!-- Lệnh/Phím tắt -->
+              <li class="nav-item">
+                <span href="#" class="nav-link">
+                  <i class="nav-icon fas fa-terminal"></i>
+                  <p>
+                    Lệnh / Phím tắt
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </span>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <span class="nav-link" onclick="MyNavigator('commands')">
+                      <i class="fas fa-digital-tachograph nav-icon"></i>
+                      <p>Lệnh</p>
+                    </span>
+                  </li>
+                  <li class="nav-item">
+                    <span class="nav-link" onclick="MyNavigator('shortcut')">
+                      <i class="fas fa-allergies nav-icon"></i>
+                      <p>Phím tắt</p>
+                    </span>
+                  </li>
+                  <li class="nav-item">
+                    <span class="nav-link" onclick="MyNavigator('custom-shortcut')">
+                      <i class="fas fa-sliders-h nav-icon"></i>
+                      <p>Cài đặt phím tắt</p>
+                    </span>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Lỗi thường gặp -->
+              <li class="nav-item">
+                <span href="#" class="nav-link">
+                  <i class="nav-icon fas fa-bug"></i>
+                  <p>
+                    Lỗi thường gặp
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </span>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <span class="nav-link" onclick="MyNavigator('lose-mic')">
+                      <i class="fas fa-microphone-alt-slash nav-icon"></i>
+                      <p>Mất mic</p>
+                      </>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Báo lỗi -->
+              <li class="nav-item">
+                <span class="nav-link" onclick="MyNavigator('report-issue')">
+                  <i class="nav-icon fas fa-flag"></i>
+                  <p>
+                    Báo lỗi/Góp ý
+                  </p>
+                </span>
+              </li>
+
+              <!-- Thoát -->
+              <!-- <li class="nav-item">
+                <span class="nav-link" onclick="MyNavigator('exit')">
+                  <i class="nav-icon fas fa-sign-out-alt"></i>
+                  <p>
+                    Đóng
+                  </p>
+                </span>
+              </li> -->
+
+
+
+            </ul>
+
+          </nav>
+
+          <!-- <nav class="col" id="menu-push">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <li class="nav-item">
+                <span href="#" class="nav-link" data-widget="pushmenu" role="button" id="zoom-menu">
+                  <i class="fas fa-bars"></i>
+                  <p>Thu nhỏ/phóng to menu</p>
+                </span>
+              </li>
+            </ul>
+          </nav> -->
+
+          <nav class="col" id="opacity">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <!-- Thoát -->
+              <li class="nav-item">
+                <span href="#" class="nav-link">
+                  <!-- <i class="nav-icon fas fa-grip-lines"></i> -->
+                  <p>
+                    Độ mờ:
+                  </p>
+                  <input type="range" id="slider_opacity" class="form-control" value="100" min="20" max="100"
+                    required="required" width="100%">
+                </span>
+              </li>
+            </ul>
+          </nav>
+
+
+
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Nội dung chính của trang -->
+      <div class="content-wrapper" style="padding-top: 30px;">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="container-fluid">
+
+            <!-- Homepage -->
+            <div class="row" id="homepage">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="container-fluid">
+                  <p style="text-align: center;">
+                    <img src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="120px"
+                      style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />
+                    <span style="font-family: 'Dancing Script', cursive; font-size: 70px;">Chào mừng bạn đến
+                      với T-Rexx City
+                    </span>
+                  </p>
+                  <!-- <img src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="140px" height="140px" style="display: block; margin: 0 auto"> -->
+                  <img src="./dist/img/avatar/background.jpg" class="img-responsive" alt="Image" width="40%"
+                    style="margin: 0 auto;display: block; border-radius: 10px; opacity: 0.8;" />
+
+                  <table class="menu-home">
+                    <tr>
+                      <td>
+                        <button onclick="MyNavigator('homepage')"><i class="fas fa-home"></i>Thông báo</button>
+                        <button onclick="MyNavigator('occupied')"><i class="fas fa-khanda"></i>Chiếm đóng</button>
+                        <button onclick="MyNavigator('shortcut')"><i class="far fa-keyboard"></i>Phím tắt</button>
+                        <button onclick="MyNavigator('commands')"><i class="fas fa-terminal"></i>Lệnh</button>
+                        <button onclick="MyNavigator('lose-mic')"><i class="fas fa-bug"></i>Lỗi & cách sửa</button>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <div class="thong-bao-area">
+                    <h1 class="thong-bao-title">Thông báo</h1>
+                    <br />
+                    <p class="thong-bao-content">
+                    <h5>
+                      Chào mừng các con vợ đã tới với TRexx City, nơi các bạn trở thành khủng long ăn cỏ hoặc "cỏ" :))
+
+                      Kế Hoạch Dự Kiến : 16/1/2022 tới 22/1/2022 Open Beta (Sẽ Lưu Database nếu không có bug lớn), 23/1/2022 - 29/1/2022 Closed Beta (Lưu Database), 30/1/2022 Mở Chính Thức
+
+                      <br />
+                      <!-- <button onclick="MyNavigator('exit')" class="thong-bao-close"><i
+                          class="fas fa-sign-out-alt thong-bao-ico"></i>Đóng</button> -->
+                    </h5>
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Lời ngỏ -->
+            <div class="row" id="note" style="display:none;">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="container-fluid">
+                  <p style="  margin: 0 auto">
+                    <span
+                      style="font-family: 'Dancing Script', cursive; font-size: 70px;display: block; text-align: center ;">
+                      <img src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
+                        style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Lời
+                      ngỏ</span>
+                  </p>
+                  <!-- <img src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="140px" height="140px" style="display: block; margin: 0 auto"> -->
+                  <img src="./dist/img/avatar/background.jpg" class="img-responsive" alt="Image" width="60%"
+                    style="margin: 0 auto;display: block; border-radius: 10px; opacity: 0.8;">
+                </div>
+                <div class="well" id="my-content">
+                  <h2>Sứ mệnh</h2>
+                  <p>
+                    Xin chào, GTA V roleplay là bản mod multiplayer cho bản PC của Grand Theft Auto V. Người chơi biến
+                    thành
+                    một trong những nhân vật được tạo bởi server RP - dưới dạng một NPC bình thường. Từ đó bạn sẽ đóng
+                    vai
+                    vào một người dân của Los Santos, bạn sẽ phải làm việc kiếm tiền để sở hữu nhà cửa, xe cộ thẩm chí
+                    là
+                    bạn có thể cướp bóc, tất cả những gì bạn có thể làm như ngoài đời. Nhưng nó cũng sẽ có luật pháp,
+                    bạn sẽ
+                    phải truy nã, ngồi tù như ngoài đời. Bạn cũng cần phải ăn uống, nếu không muốn nhân vật của mình bị
+                    chết.
+                  </p>
+
+                  <h2>Phong cách</h2>
+
+                  <p>
+                    T-Rexx City tự hào là thành phố nói <b>KHÔNG</b> với #PayToWin, chúng tôi luôn có đường lối chiến
+                    lược
+                    phát
+                    triển rõ ràng cho đứa con tinh thần của mình. Các vật phẩm donate không tạo chênh lệch quá lớn với
+                    các
+                    con
+                    vợ
+                    cày.
+                    <br />
+                    KHÔNG có sự phân biệt giữa các người chơi "nạp tiền" và các con vợ cày. Chúng mình đơn giản chỉ là
+                    đưa
+                    ra
+                    các
+                    item, xe, nhà để người chơi có thể sở hữu bằng tiền VND. Các vật phẩm này được các con vợ mua vì nó
+                    hơn,
+                    nó độc,
+                    nó vui... nhưng quan trọng hơn tất cả, mọi người góp phần vào sự duy trì và phát triển của thành
+                    phố.
+                    Tóm
+                    gọn là,
+                    người chơi "nạp tiền" chúng mình gọi là donator và những người chơi này muốn ủng hộ server.
+                    <br />
+                    Số tiền chúng mình dùng để duy trì và phát triển server cũng như trả lương cho các anh em. Nên các
+                    con
+                    vợ
+                    có thương anh em admin chúng mình thì đừng ngần ngại cho chúng tớ một ly cafe nhé ^^.
+                  </p>
+
+                  </p>
+                  <h2>Chia sẻ</h2>
+                  <p>
+                    Bọn mình cũng là người, cũng phải ăn uống ngủ nghỉ cũng có vợ có con có cuộc sống như một con người
+                    và
+                    có các công việc ngoài đời
+                    thường. Bọn mình tạo nên server T-Rexx vì đam mê là trước hết, tạo một sân chơi cho anh em cùng chí
+                    hướng
+                    và anh em yêu quý ủng hộ server. Nguồn thu nhập từ server tuy cũng lớn nhưng không đủ để chia lương
+                    và
+                    làm
+                    nguồn thu nhập chính nuôi gia đình được nên không có lý do nào để bọn mình bỏ 100% thời gian làm
+                    việc
+                    trong server được. Bọn mình phải chia ra rõ ràng các việc ưu tiên và việc không ưu tiên. Việc ưu
+                    tiên là
+                    các việc ảnh hưởng tới nhiều người chơi khác, các vấn đề liên quan tới bug và ảnh hưởng trực tiếp
+                    tới
+                    server. Các vấn đề không ưu tiên như tivi này đúng là có sẽ tốt nhưng không có cũng không ảnh hưởng
+                    quá
+                    nhiều tới người chơi nên không thể ưu tiên trước được. Các công việc ưu tiên đòi hỏi cần nhiều thời
+                    gian
+                    bàn bạc, tìm phương án giải quyết và thực hiện giải pháp đó. Nó không phải câu chuyện trong ngày một
+                    ngày
+                    hai. Không dám so sánh với các server khác nhưng chúng mình tự tin nói rằng đây là server này không
+                    phải
+                    là server tốt nhất nhưng mình tự tin nói rằng đây là server được phát triển nhiều nhất và có tâm
+                    nhất và
+                    tâm huyết nhất. Còn lại là tuỳ các nhìn nhận của mọi người.
+                  </p>
+
+                  <h2>Lời kết</h2>
+                  <p>Chân thành cảm ơn các con vợ đã, đang và sẽ là công dân của T-Rexx City. Chúng mình chẳng thể làm
+                    gì
+                    nếu không có sự chung tay giúp đỡ từ các bạn. Khi cần hỗ trợ hay cần góp ý đừng ngần ngại hãy tạo
+                    ticket
+                    admin để chúng ta có thể trao đổi với nhau một cách dễ dàng nhất nhé. Cuối cùng, chúc anh em có
+                    những
+                    giây phút vui vẻ với T-Rexx City</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lệnh -->
+            <div class="row" id="commands" style="display: none;">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="container-fluid">
+                  <p style="text-align: center;">
+                    <span style="font-family: 'Dancing Script', cursive; font-size: 50px;">
+                      <img src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
+                        style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Danh sách lệnh</span>
+                  <h5 style="font-style: italic;font-size: 13px;">Note: Để sử dụng lệnh, hãy nhấn
+                    phím <b style="color:yellow">T</b> để hiện cửa sổ chat rồi nhập lệnh nhé.</h5>
+                  <h5 style="font-style: italic;font-size: 15px;"></h5>
+                  </p>
+
+                  <div class="card" style="border-radius: 10px;">
+                    <div class="card-header">
+                      <h3 class="card-title"></h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <table id="my-table" class="table table-bordered table-striped" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th style="">Lệnh</th>
+                            <th>Mô tả lệnh</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          <tr>
+                            <td style="color:yellow">/me [nội dung]</td>
+                            <td>Để chat trong thành phố (khuyến khích dùng mic)</td>
+                          </tr>
+
+
+                          <tr>
+                            <td style="color:yellow">/duatienmat [id] [số tiền]</td>
+                            <td>Chuyển tay tiền mặt</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">/bill [id] [số tiền]</td>
+                            <td>Hóa đơn cho các ngành Cảnh Sát, Bác Sĩ, Cứu Hộ</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">/911</td>
+                            <td>Nhắn cho cơ quan chức năng ( Bác Sĩ, Cảnh Sát, ...vv)</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">/113 [lời nhắn]</td>
+                            <td>Gọi yêu cầu trợ giúp cho Cảnh Sát</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">/114 [lời nhắn]</td>
+                            <td>Gọi yêu cầu trợ giúp cho Cứu Hộ</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">/115 [lời nhắn]</td>
+                            <td>Gọi yêu cầu trợ giúp cho Bác sĩ</td>
+                          </tr>
+                          <tr>
+                            <td style="color:yellow">/tichthuxe</td>
+                            <td>[Cảnh sát] - Tịch thu xe của đối tượng về kho phương tiện ở đồn</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">/giamxe</td>
+                            <td>[Cảnh sát] - Xoá xe NPC</td>
+                          </tr>
+
+
+                          <tr>
+                            <td style="color:yellow">/hoisinh</td>
+                            <td>Tự hồi sinh khi không có bác sĩ online</td>
+                          </tr>
+
+
+                          <tr>
+                            <td style="color:yellow">/kill</td>
+                            <td>Chấm dứt nhân sinh, về với đất mẹ (ừ, tự sát đấy, ừ)</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">/caplaichiakhoaxe</td>
+                            <td>Nếu bị lỗi mất chìa khoá xe hãy dùng lại lệnh này nhé</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">/taovoucher</td>
+                            <td>Tạo voucher giảm giá cho khách hàng</td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+
+
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Phím tắt -->
+            <div class="row" id="shortcut" style="display: none;">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="container-fluid">
+                  <p style="text-align: center;">
+                    <span style="font-family: 'Dancing Script', cursive; font-size: 50px;"><img
+                      src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
+                      style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Danh sách phím tắt T-Rexx
+                      City</span>
+                  <h5 style="font-style: italic;font-size: 13px;">Note: Để sử dụng lệnh, hãy nhấn
+                    phím <b style="color:yellow">T</b> để hiện cửa sổ chat rồi nhập lệnh nhé.</h5>
+                  <h5 style="font-style: italic;font-size: 15px;"></h5>
+                  </p>
+
+                  <div class="card" style="border-radius: 10px;">
+                    <div class="card-header">
+                      <h3 class="card-title"></h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <table id="my-table2" class="table table-bordered table-striped" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th style="">Lệnh</th>
+                            <th>Mô tả lệnh</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          <tr>
+                            <td style="color:yellow">F1</td>
+                            <td>Mở menu hành động</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">Home</td>
+                            <td>Xem thông tin người khác</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">T</td>
+                            <td>Cửa sổ chat</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">N</td>
+                            <td>Nói chuyện qua mic ( nhấn giữ - dùng trong push to talk)</td>
+                          </tr>
+
+
+                          <tr>
+                            <td style="color:yellow">Esc / P</td>
+                            <td>Mở bản đồ</td>
+                          </tr>
+
+
+
+                          <tr>
+                            <td style="color:yellow">SHIFT</td>
+                            <td>Chạy nhanh</td>
+                          </tr>
+
+
+                          <tr>
+                            <td style="color:yellow">Ctrl</td>
+                            <td>Ngồi/ Nằm/ Đứng</td>
+                          </tr>
+
+
+                          <tr>
+                            <td style="color:yellow">Y</td>
+                            <td>Mặc / cởi đồ</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">Tab</td>
+                            <td>Mở kho đồ</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">L</td>
+                            <td>Khoá xe của bạn</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">B</td>
+                            <td>Chỉ tay về phía trước</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">Q</td>
+                            <td>Bật đèn ưu tiên, dùng cho xe có còi ưu tiên</td>
+                          </tr>
+
+
+                          <tr>
+                            <td style="color:yellow">E</td>
+                            <td>Bật còi ưu tiên, dùng cho xe có còi ưu tiên</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">M</td>
+                            <td>[Cảnh sát] Bắn GPS</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">G</td>
+                            <td>Thắt / Cởi dây an toàn</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">H</td>
+                            <td>Đổi pha đèn</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">V</td>
+                            <td>Đổi góc nhìn</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">F10</td>
+                            <td>Menu phương tiện</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">F</td>
+                            <td>Lên/xuống xe</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color:yellow">Shift + E</td>
+                            <td>Đẩy xe khi xe không thể hoạt động (hết xăng, hỏng...)</td>
+                          </tr>
+
+                        </tbody>
+
+                      </table>
+
+
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Cài đặt Phím tắt -->
+            <div class="row" id="custom-shortcut" style="display: none;">
+
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="container-fluid">
+
+                  <p style="text-align: center;">
+                    <span style="font-family: 'Dancing Script', cursive; font-size: 50px;"> <img
+                        src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
+                        style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Tuỳ chỉnh phím tắt</span>
+                  </p>
+
+                  <div class="card" style="border-radius: 10px;">
+                    <div class="card-header">
+                      <h3 class="card-title"></h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <div class="my-guide">
+                        <p>Để có thể tuỷ chỉnh phím tắt, bạn hãy nhấn phím <b style="color:yellow">Esc</b> để mở Pause
+                          Menu.
+                          Sau đó, anh em vô phần Setting -> Keyboards</p>
+                        <img src="./dist/img/guide/change-shorcut/image_1.png" class="img-responsive" alt="Image">
+                        <br />
+                        <p>Sau đó, mọi người vào phần <b>FiveM</b> rồi tuỳ chỉnh theo ý thích nhé !</p>
+                        <img src="./dist/img/guide/change-shorcut/image_2.png" class="img-responsive" alt="Image">
+                      </div>
+
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Báo lỗi -->
+            <div class="row" id="report-issue" style="display: none;">
+
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="container-fluid">
+
+                  <p style="text-align: center;">
+                    <span style="font-family: 'Dancing Script', cursive; font-size: 50px;"><img
+                      src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
+                      style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Hướng dẫn báo lỗi </span>
+                  </p>
+
+                  <div class="card" style="border-radius: 10px;">
+                    <div class="card-header">
+                      <h3 class="card-title"></h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <div class="my-guide">
+                        <p>Các con vợ hãy truy cập vào discord của <b style="color:yellow">T-Rexx City</b>, các bạn tìm
+                          kênh
+                          <b style="color:yellow">HỖ TRỢ-GÓP Ý-BÁO LỖI</b> --> <b
+                            style="color:yellow">hỗ-trợ-từ-admin</b>. Các con vợ sẽ thấy biểu tượng lá thư như hình,
+                          click
+                          vào lá thư đó, 1 kênh mới sẽ được tạo ra mà chỉ riêng con vợ và admin thấy được thôi nên yên
+                          tâm
+                          khỏi lo lộ tâm sự tuổi hồng nhé ^^.
+                        </p>
+
+                        <img src="./dist/img/guide/report-issue/image_1.png" class="img-responsive" alt="Image">
+                        <br />
+                        <p>Các bạn vào kênh mới này, điền nội dung một cách lịch sự như nói chuyện với ghệ nhé</p>
+                        <img src="./dist/img/guide/report-issue/image_2.png" class="img-responsive" alt="Image">
+                      </div>
+
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Lỗi mất mic -->
+            <div class="row" id="lose-mic" style="display: none;">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="container-fluid">
+
+                  <p style="text-align: center;">
+                    <span style="font-family: 'Dancing Script', cursive; font-size: 50px;"><img
+                      src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
+                      style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Chỉnh lỗi mất mic trong
+                      </span>
+                  </p>
+
+                  <div class="card" style="border-radius: 10px;">
+                    <div class="card-header">
+                      <h3 class="card-title"></h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <div class="my-guide">
+                        <p>Đôi lúc trong thành phố, bạn sẽ bị "đờm" nên bạn nói không có ai nghe.Để có thể sửa lỗi này,
+                          bạn hãy nhấn phím <b style="color:yellow">Esc</b> để mở Pause
+                          Menu.
+                          Sau đó, anh em vô phần Setting -> Voice chat</p>
+                        <img src="./dist/img/guide/lose-voice/image_1.png" class="img-responsive" alt="Image">
+                        <br />
+                        <p>Sau đó, mọi người TẮT <b>Voice chat Enabled</b> đi nhé</p>
+                        <img src="./dist/img/guide/lose-voice/image_2.png" class="img-responsive" alt="Image">
+                        <br />
+                        <p>Cuối cùng, mọi người BẬT lại <b>Voice chat Enabled</b> nhé. Sau đó thử lại xem được chưa,
+                          chưa
+                          nếu vẫn chưa được bạn thử làm lại từ đầu nhé. Chưa được nữa thì mở ticket báo lỗi nha.</p>
+                        <img src="./dist/img/guide/lose-voice/image_3.png" class="img-responsive" alt="Image">
+
+
+                        <br />
+                        <br />
+
+                        <h3 class="my-center">♠ Chúc bạn chơi game vui vẻ! ♠
+                        </h3>
+                      </div>
+
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Lỗi mất mic -->
+            <div class="row" id="occupied" style="display: none;">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="container-fluid">
+
+                  <p style="text-align: center;">
+                    <span style="font-family: 'Dancing Script', cursive; font-size: 50px;"><img
+                      src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
+                      style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Chỉnh lỗi mất mic trong</span>
+                  </p>
+
+                  <div class="card" style="border-radius: 10px;">
+                    <div class="card-header">
+                      <h3 class="card-title"></h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <div class="my-guide">
+                        <h1>Chiếm đóng</h1>
+
+                        <br />
+                        <br />
+
+                        <h3 class="my-center">♠ Chúc bạn chơi game vui vẻ! ♠
+                        </h3>
+                      </div>
+
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- /.row -->
+          </div>
+          <!--/. container-fluid -->
+        </section>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+
+      <!-- Main Footer -->
+      <footer class="main-footer" style="display: block;">
+        <strong>Copyright &copy; 2021
+          <a href="#">T-Rexx City - Admin LTE</a>.</strong>
+        All rights reserved.
+        <div class="float-right d-none d-sm-inline-block">
+          <b>Version</b> 1.0
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED SCRIPTS -->
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- DataTables  & Plugins -->
+  <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="plugins/jszip/jszip.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+
+  <!-- PAGE PLUGINS -->
+  <!-- jQuery Mapael -->
+  <script src="plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+  <script src="plugins/raphael/raphael.min.js"></script>
+  <script src="plugins/jquery-mapael/jquery.mapael.min.js"></script>
+  <script src="plugins/jquery-mapael/maps/usa_states.min.js"></script>
+
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <!-- Page specific script -->
+  <script>
+    $(function () {
+      $('#my-table').DataTable({
+        "paging": true,
+        "lengthChange": true,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": true,
+        "responsive": true,
+      });
+      $('#my-table2').DataTable({
+        "paging": true,
+        "lengthChange": true,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": true,
+        "responsive": true,
+      });
+    });
+
+    var p = document.getElementById("slider_opacity")
+    p.addEventListener("input", function () {
+      console.log('p.value :>> ', p.value);
+      $("body").css("opacity", p.value / 100);
+    }, false);
+
+    function escapeInterface() {
+      fetch(`https://avatar_helper/escape`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json; charset=UTF-8', },
+        body: JSON.stringify({})
+      }).then(resp => resp.json()).then(resp => {
+        return resp;
+      });
+    }
+
+    document.onkeydown = evt => {
+      if (!interfaceShowing) return false;
+      evt = evt || window.event;
+      if (evt.keyCode === 27) {
+        MyNavigator("exit");
+        escapeInterface();
+      }
+    };
+
+    window.addEventListener('message', event => {
+      if (!event.data) return false;
+      if (event.data.type === 'help:toggle') {
+        interfaceShowing = event.data.enable;
+        if (event.data.enable === true) {
+          console.log("object");
+          $("body").fadeIn("slow");
+        } else if (event.data.enable === false) {
+          $("body").fadeOut("fast");
+        }
+      }
+    });
+
+
+  </script>
+</body>
+
+</html>

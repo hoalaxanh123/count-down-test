@@ -98,16 +98,20 @@ https://templatemo.com/tm-521-get-ready
     font-size: 4vh;
   }
   #my-audioplay{
-    position: absolute;
+    /* position: absolute;
     left: 0;
     right: 0;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
     width: 250px;
     height: 29px;
     /* background: transparent; */
     border: none;
     z-index: 999999999;
+    opacity: 0.1;
+  }
+  #my-audioplay:hover{
+    opacity: 1;
   }
   .overlay {
     background: linear-gradient(to top right, #fbfbfb29, #000000);
