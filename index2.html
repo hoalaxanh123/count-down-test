@@ -113,20 +113,36 @@
                 </ul>
               </li>
 
-              <!-- Chiếm đóng -->
+              <!-- Hướng dẫn -->
               <li class="nav-item menu-open">
                 <span class="nav-link active">
-                  <i class="nav-icon fas fa-fighter-jet"></i>
+                  <i class="fas fa-caret-square-right nav-icon"></i>
                   <p>
-                    Chiếm đóng
+                    Hướng dẫn
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </span>
                 <ul class="nav nav-treeview">
                   <li class="nav-item" onclick="MyNavigator('occupied')">
                     <span href="./index2.html" class="nav-link">
-                      <i class="fas fa-caret-square-right nav-icon"></i>
-                      <p>Hướng dẫn</p>
+                      <i class="nav-icon fas fa-fighter-jet"></i>
+                      <p>Chiếm đóng</p>
+                    </span>
+                  </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item" onclick="MyNavigator('cannabis')">
+                    <span href="./index2.html" class="nav-link">
+                      <i class="nav-icon fas fa-cannabis"></i>
+                      <p>Trồng cần</p>
+                    </span>
+                  </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item" onclick="MyNavigator('shop-robbey')">
+                    <span href="./index2.html" class="nav-link">
+                      <i class="nav-icon fas fa-shopping-basket"></i>
+                      <p>Cướp tạp hoá</p>
                     </span>
                   </li>
                 </ul>
@@ -194,14 +210,14 @@
               </li>
 
               <!-- Thoát -->
-              <!-- <li class="nav-item">
+              <li class="nav-item">
                 <span class="nav-link" onclick="MyNavigator('exit')">
                   <i class="nav-icon fas fa-sign-out-alt"></i>
                   <p>
                     Đóng
                   </p>
                 </span>
-              </li> -->
+              </li>
 
 
 
@@ -244,7 +260,8 @@
       </aside>
 
       <!-- Nội dung chính của trang -->
-      <div class="content-wrapper" style="padding-top: 30px;">
+      <div class="content-wrapper"
+        style="padding-top: 30px; background: url('./dist/img/hinh-nen.jpg');background-repeat: no-repeat, repeat;background-size: cover;">
         <!-- Content Header (Page header) -->
         <div class="content-header">
           <div class="container-fluid">
@@ -271,19 +288,33 @@
                     <span style="font-family: 'Dancing Script', cursive; font-size: 70px;">Chào mừng bạn đến
                       với T-Rexx City
                     </span>
+                    <img src="./dist/img/tiger.png" style="border-radius: 50%;margin-top: -35px;" width="130px" />
                   </p>
                   <!-- <img src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="140px" height="140px" style="display: block; margin: 0 auto"> -->
-                  <img src="./dist/img/avatar/background.jpg" class="img-responsive" alt="Image" width="40%"
-                    style="margin: 0 auto;display: block; border-radius: 10px; opacity: 0.8;" />
+                  <img src="./dist/img/ho-beo.png" class="img-responsive" alt="Image" width="40%"
+                    style="    margin: -50px auto;
+                    display: block;
+                    border-radius: 10px;
+                    opacity: 0.9;
+                    width: 19%;" />
 
                   <table class="menu-home">
                     <tr>
-                      <td>
-                        <button onclick="MyNavigator('homepage')"><i class="fas fa-home"></i>Thông báo</button>
-                        <button onclick="MyNavigator('occupied')"><i class="fas fa-khanda"></i>Chiếm đóng</button>
-                        <button onclick="MyNavigator('shortcut')"><i class="far fa-keyboard"></i>Phím tắt</button>
-                        <button onclick="MyNavigator('commands')"><i class="fas fa-terminal"></i>Lệnh</button>
-                        <button onclick="MyNavigator('lose-mic')"><i class="fas fa-bug"></i>Lỗi & cách sửa</button>
+                      <td style="text-align: center;">
+                        <button class="my-button-nav" onclick="MyNavigator('homepage')"><i class="fas fa-home"></i>Thông
+                          báo</button>
+                        <button class="my-button-nav" onclick="MyNavigator('occupied')"><i
+                            class="fas fa-khanda"></i>Chiếm đóng</button>
+                        <button class="my-button-nav" onclick="MyNavigator('cannabis')"><i
+                            class="fas fa-cannabis"></i>Trồng cần</button>
+                        <button class="my-button-nav" onclick="MyNavigator('shop-robbey')"><i
+                            class="fas fa-dollar-sign"></i>Cướp tạp hoá</button>
+                        <button class="my-button-nav" onclick="MyNavigator('shortcut')"><i
+                            class="far fa-keyboard"></i>Phím tắt</button>
+                        <button class="my-button-nav" onclick="MyNavigator('commands')"><i
+                            class="fas fa-terminal"></i>Lệnh</button>
+                        <button class="my-button-nav" onclick="MyNavigator('lose-mic')"><i class="fas fa-bug"></i>Lỗi &
+                          cách sửa</button>
                       </td>
                     </tr>
                   </table>
@@ -291,15 +322,57 @@
                   <div class="thong-bao-area">
                     <h1 class="thong-bao-title">Thông báo</h1>
                     <br />
+                    <br />
                     <p class="thong-bao-content">
                     <h5>
                       Chào mừng các con vợ đã tới với TRexx City, nơi các bạn trở thành khủng long ăn cỏ hoặc "cỏ" :))
-                      <br/>
-                      Kế Hoạch Dự Kiến : 16/1/2022 tới 22/1/2022 Open Beta (Sẽ Lưu Database nếu không có bug lớn), 23/1/2022 - 29/1/2022 Closed Beta (Lưu Database), 30/1/2022 Mở Chính Thức
+                      <br />
+                      <br />
+                      Changelog:
+                      <p>22/2/2022</p>
+                      <ul>
+                        <li>Cần sa thiên nhiên cực cùi bắp, sản lượng thấp, hàng cùi, chỉ giành cho ai ...</li>
+                        <li>Hướng dẫn trồng cần sa xịn, coi <b style="cursor: pointer;" onclick="MyNavigator('cannabis')">tại đây</b></li>
+                      </ul>
+                      <p>21/2/2022</p>
+                      <ul>
+                        <li>Giảm giá thuê xe</li>
+                        <li>Bẻ khoá thành công thì mất 15-20% mất lockpick, thất bại thì còn cái nịt</li>
+                        <li>Tạm mở taxi NHƯNG chưa có tiền khi chạy NPC (đang fix), mục đích cho anh em mới vô có xe đi
+                          lại</li>
+                        <li>Giảm giá bình lặn xuống 5000 TRD</li>
+                        <li>Giảm giá lockpick lên 1000 TRD </li>
+                      </ul>
+                      <p>20/2/2022</p>
+                      <ul>
+                        <li>Fix lỗi điện thoại không tắt được</li>
+                        <li>Tạm tắt nghề taxi để sửa lỗi</li>
+                        <li>Không mất bộ công cụ khi phá khoá nhà</li>
+                        <li>Phá khoá nhà sẽ random mất lockpick, bạn đen thì bạn mất</li>
+                        <li>Tạm mở khu hái cần</li>
+                      </ul>
+                      <p>26/2/2022</p>
+                      <ul>
+                        <li>Tạm tắt nghề taxi để sửa lỗi</li>
+                        <li>Không mất bộ công cụ khi phá khoá nhà</li>
+                        <li>Phá khoá nhà sẽ random mất lockpick, bạn đen thì bạn mất</li>
+                        <li>Lỗi đồng hồ bắn tốc của cảnh sát che đồng hồ công tơ mét</li>
+                        <li>Thêm tính năng tắt đồng hồ bắn tốc vào menu F1 -> ngành CS</li>
+                      </ul>
+                      <br />
+                      Kế Hoạch Dự Kiến :
+                      <ul>
+                        <li>16/1/2022 tới 22/1/2022 Open Beta (không xoá dữ liệu người chơi nếu KHÔNG phát sinh vấn đề
+                          lớn)</li>
+                        <li>23/1/2022 - 29/1/2022 Closed Beta (không xoá dữ liệu người chơi)</li>
+                        <li>30/1/2022 Mở Chính Thức</li>
+                      </ul>
+                      <h5>Note: anh em chưa có xe, ở toà chị chính có cho thuê xe đi làm nhá.</h5>
+                      <h5 style="font-style: italic;">New city, new life <br />Have fun! !</h5>
 
                       <br />
-                      <!-- <button onclick="MyNavigator('exit')" class="thong-bao-close"><i
-                          class="fas fa-sign-out-alt thong-bao-ico"></i>Đóng</button> -->
+                      <button onclick="MyNavigator('exit')" class="thong-bao-close"><i
+                          class="fas fa-sign-out-alt thong-bao-ico"></i>Đóng</button>
                     </h5>
                     </p>
                   </div>
@@ -318,7 +391,9 @@
                       style="font-family: 'Dancing Script', cursive; font-size: 70px;display: block; text-align: center ;">
                       <img src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
                         style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Lời
-                      ngỏ</span>
+                      ngỏ
+                      <img src="./dist/img/tiger.png" style="border-radius: 50%;margin-top: -35px;" width="130px" />
+                    </span>
                   </p>
                   <!-- <img src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="140px" height="140px" style="display: block; margin: 0 auto"> -->
                   <img src="./dist/img/avatar/background.jpg" class="img-responsive" alt="Image" width="60%"
@@ -419,7 +494,8 @@
                   <p style="text-align: center;">
                     <span style="font-family: 'Dancing Script', cursive; font-size: 50px;">
                       <img src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
-                        style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Danh sách lệnh</span>
+                        style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Danh sách lệnh <img
+                        src="./dist/img/tiger.png" style="border-radius: 50%;margin-top: -35px;" width="130px" /></span>
                   <h5 style="font-style: italic;font-size: 13px;">Note: Để sử dụng lệnh, hãy nhấn
                     phím <b style="color:yellow">T</b> để hiện cửa sổ chat rồi nhập lệnh nhé.</h5>
                   <h5 style="font-style: italic;font-size: 15px;"></h5>
@@ -525,9 +601,10 @@
                 <div class="container-fluid">
                   <p style="text-align: center;">
                     <span style="font-family: 'Dancing Script', cursive; font-size: 50px;"><img
-                      src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
-                      style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Danh sách phím tắt T-Rexx
-                      City</span>
+                        src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
+                        style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Danh sách phím tắt T-Rexx
+                      City <img src="./dist/img/tiger.png" style="border-radius: 50%;margin-top: -35px;"
+                        width="130px" /></span>
                   <h5 style="font-style: italic;font-size: 13px;">Note: Để sử dụng lệnh, hãy nhấn
                     phím <b style="color:yellow">T</b> để hiện cửa sổ chat rồi nhập lệnh nhé.</h5>
                   <h5 style="font-style: italic;font-size: 15px;"></h5>
@@ -542,7 +619,7 @@
                       <table id="my-table2" class="table table-bordered table-striped" style="width:100%">
                         <thead>
                           <tr>
-                            <th style="">Lệnh</th>
+                            <th>Lệnh</th>
                             <th>Mô tả lệnh</th>
                           </tr>
                         </thead>
@@ -676,7 +753,7 @@
                   <p style="text-align: center;">
                     <span style="font-family: 'Dancing Script', cursive; font-size: 50px;"> <img
                         src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
-                        style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Tuỳ chỉnh phím tắt</span>
+                        style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Tuỳ chỉnh phím tắt  <img src="./dist/img/tiger.png" style="border-radius: 50%;margin-top: -35px;" width="130px"/></span>
                   </p>
 
                   <div class="card" style="border-radius: 10px;">
@@ -711,8 +788,8 @@
 
                   <p style="text-align: center;">
                     <span style="font-family: 'Dancing Script', cursive; font-size: 50px;"><img
-                      src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
-                      style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Hướng dẫn báo lỗi </span>
+                        src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
+                        style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Hướng dẫn báo lỗi  <img src="./dist/img/tiger.png" style="border-radius: 50%;margin-top: -35px;" width="130px"/></span>
                   </p>
 
                   <div class="card" style="border-radius: 10px;">
@@ -753,9 +830,9 @@
 
                   <p style="text-align: center;">
                     <span style="font-family: 'Dancing Script', cursive; font-size: 50px;"><img
-                      src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
-                      style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Chỉnh lỗi mất mic trong
-                      </span>
+                        src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
+                        style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Chỉnh lỗi mất mic trong
+                    </span>
                   </p>
 
                   <div class="card" style="border-radius: 10px;">
@@ -796,15 +873,15 @@
             </div>
 
 
-            <!-- Lỗi mất mic -->
+            <!-- Hướng dẫn chiếm đóng -->
             <div class="row" id="occupied" style="display: none;">
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="container-fluid">
 
                   <p style="text-align: center;">
                     <span style="font-family: 'Dancing Script', cursive; font-size: 50px;"><img
-                      src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
-                      style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Chỉnh lỗi mất mic trong</span>
+                        src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
+                        style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Hướng dẫn chiếm đóng</span>
                   </p>
 
                   <div class="card" style="border-radius: 10px;">
@@ -815,9 +892,24 @@
                     <div class="card-body">
                       <div class="my-guide">
                         <h1>Chiếm đóng</h1>
+                        <p>Yêu cầu: </p>
+                        <ul>
+                          <li>Phải là Gang (được đăng ký chính thức) hoặc Cảnh Sát</li>
+                        </ul>
 
-                        <br />
-                        <br />
+                        <p>Hướng dẫn:</p>
+                        <ul>
+                          <li>1/ Khu Vưc Địa Bàn Sẽ là những ô vuông có màu sắc riêng ( Trắng : Cảnh Sát Đang chiếm, Các
+                            Màu Khác tương ứng với các gang đang chiếm</li>
+                          <li>2/ Khi vào khu vực chiếm đóng, sẽ hiện thông tin gang nào đang nắm giữ địa bàn.</li>
+                          <li>3/ Các gang đang nắm giữ địa bàn 100% sẽ có thể bán các vật phẩm tại địa bàn đó</li>
+                          <li>4/ Dùng Phím G hoặc menu F1 để bán vật phẩm Cấm trong địa bàn</li>
+                          <li>5/ Bạn có thể bị người dân xung quanh (NPC) báo cảnh sát nếu phát hiện (bạn có thể
+                            giếtchết NPC đó để không bị báo cảnh sát)</li>
+                          <li>6/ Mỗi 5' chiếm được 100% địa bàn sẽ được cộng 100đ chiếm đóng</li>
+                          <li>7/ Điểm chiếm đóng sẽ được tổng kết mỗi tuần phát thưởng top 1,2,3 </li>
+                          <li>8/ điểm chiếm đóng còn được dùng để mua các vật phẩm gang cho gang của bạn</li>
+                        </ul>
 
                         <h3 class="my-center">♠ Chúc bạn chơi game vui vẻ! ♠
                         </h3>
@@ -830,6 +922,124 @@
                 </div>
               </div>
             </div>
+
+            <!-- Hướng dẫn trồng cần -->
+            <div class="row" id="cannabis" style="display: none;">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="container-fluid">
+
+                  <p style="text-align: center;">
+                    <span style="font-family: 'Dancing Script', cursive; font-size: 50px;"><img
+                        src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
+                        style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Hướng dẫn trồng cần sa</span>
+                  </p>
+
+                  <div class="card" style="border-radius: 10px;">
+                    <div class="card-header">
+                      <h3 class="card-title"></h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <div class="my-guide">
+
+                        <p>Yêu cầu</p>
+                        <ul>
+                          <li>Chậu cây</li>
+                          <li>Phân bón</li>
+                          <li>Nước tưới</li>
+                        </ul>
+
+                        <p>Địa điểm trồng:</p>
+                        <ul>
+                          <li>Hạt thường: bất cứ đâu</li>
+                          <li>Hạt tốt : trong nhà</li>
+                        </ul>
+
+                        <p>Cách trồng</p>
+                        <ul>
+                          <li>Sử dụng hạt ở địa điểm muốn trồng cây</li>
+                          <li>Tưới cây và bón phân đầy đủ</li>
+                          <li>Cây sẽ cho hạt hoặc bông sản lượng cao nếu bạn chăm sóc tốt</li>
+                        </ul>
+
+                        <p>Chế biến</p>
+                        <ul>
+                          <li>Chế từ cây cần sa ra bông: đi đến địa điểm quy định và sấy</li>
+                          <li>Đóng gói thành điếu: cần giấy quấn (làm từ giấy và nhựa) </li>
+                        </ul>
+
+                        <p>Bán :</p>
+                        <ul>
+                          <li>Có thể bán lẻ ở địa bàn chiếm đóng gang hoặc bán sỉ ở điểm giao dịch sỉ</li>
+                        </ul>
+
+                        <p>Vẫn chưa hiểu?</p>
+                        <ul>
+                          <li>Hãy tự trải nghiệm hoặc qua 217 kiếm người hỏi nha !</li>
+                        </ul>
+
+
+                        <h3 class="my-center">♠ Chúc bạn chơi game vui vẻ! ♠
+                        </h3>
+                      </div>
+
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Hướng dẫn cướp tạp hoá -->
+            <div class="row" id="shop-robbey" style="display: none;">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="container-fluid">
+
+                  <p style="text-align: center;">
+                    <span style="font-family: 'Dancing Script', cursive; font-size: 50px;"><img
+                        src="./dist/img/Logo.png" class="img-responsive" alt="Image" width="100px"
+                        style="margin-top: -40px; border-radius: 10px; opacity: 0.8;" />Hướng dẫn cướp tạp hoá</span>
+                  </p>
+
+                  <div class="card" style="border-radius: 10px;">
+                    <div class="card-header">
+                      <h3 class="card-title"></h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <div class="my-guide">
+
+                        <p>Mỗi Tạp Hóa Sẽ có 3 loại cướp:</p>
+                        <ul>
+                          <li>1/ Cậy máy tính tiền</li>
+                          <li>2/ Phá Két Sắt (loại vặn số)</li>
+                          <li>3/ Phá Két Sắt (loại mã số)</li>
+                        </ul>
+
+                        <p>Dụng Cụ Cần :</p>
+                        <ul>
+                          <li>1/ Phá Khóa Nâng Cao + Bộ Công Cụ : Mở Quầy Tính Tiền</li>
+                          <li>2/ StickyNote : (Lấy được từ Quầy Tính Tiền) : Có Mã Số Mở Két Sắt</li>
+                        </ul>
+
+                        <p>Cách cướp</p>
+                        <ul>
+                          <li>Hãy tự trải nghiệm hoặc qua 217 kiếm người hỏi nha !</li>
+                        </ul>
+
+                        <h3 class="my-center">♠ Chúc bạn chơi game vui vẻ! ♠
+                        </h3>
+                      </div>
+
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
 
             <!-- /.row -->
           </div>

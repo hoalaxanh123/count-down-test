@@ -6,6 +6,8 @@ function MyNavigator(e) {
     "commands",
     "shortcut",
     "custom-shortcut",
+    "cannabis",
+    "shop-robbey",
     "lose-mic",
     "report-issue",
     "exit",
